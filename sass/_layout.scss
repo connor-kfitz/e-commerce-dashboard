@@ -75,7 +75,6 @@
 .header {
     display: flex;
     align-items: center;
-    flex: 1 0;
     height: 7rem;
     padding: 5rem 3rem;
     border-bottom: 1px solid #3C3C3C;
@@ -165,5 +164,99 @@
         &::-webkit-input-placeholder {
             color: #fff;
         }
+    }
+}
+
+.main-dashboard {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 70%;
+    padding: 2rem;
+
+    &__top {
+        display: flex;
+    }
+}
+
+.side-dashboard {
+    flex: 1 0;
+    background-color: lightgray;
+}   
+
+.dashboard-tile {
+    background-color: $tile-background-color;
+}
+
+.small-tile {
+    display: flex;
+    justify-content: space-between;
+    flex: .5;
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+
+    &:not(:last-child) {
+        margin-right: 2rem;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 3.5rem;
+        line-height: 1.4;
+    }
+
+    &__revenue {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-left: .2rem;
+    }
+
+    &__summary-box {
+        display: flex;
+        align-items: center;
+    }
+
+    &__percent-box {
+        display: flex;
+        align-items: center;
+        border-radius: .35rem;
+        padding: .25rem .5rem;
+        margin-right: 1rem;
+
+        &.gain {
+            background-color: #A9FFA7;
+            color: #037400;
+        }
+
+        &.loss {
+            background-color: #FFA7A7;
+            color: #740000;
+        }
+    }
+
+    &__percent-img {
+        margin-right: .25rem;
+
+        &.loss {
+            transform: scaleY(-1);
+        }
+    }
+
+    &__percent {
+        color: inherit;
+    }
+
+    &__cost {
+        font-size: 1.4rem;
+        color: $primary-color;
+    }
+
+    &__graph-img {
+        margin-top: auto;
     }
 }

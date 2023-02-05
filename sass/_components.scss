@@ -7,5 +7,16 @@
     min-height: 98.2rem;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0;
+}
+
+.dashboard-view {
+    display: flex;
+    flex: 1 0;
+}
+
 
 

@@ -20,7 +20,7 @@ body {
 .side-bar {
   display: flex;
   flex-direction: column;
-  flex: 0 0 16%;
+  flex: 0 0 15%;
   border-right: 1px solid #3C3C3C; }
   .side-bar__header {
     display: flex;
@@ -55,8 +55,7 @@ body {
       filter: none; }
   .side-bar__link {
     display: flex;
-    align-items: center;
-    flex: 1 0; }
+    align-items: center; }
   .side-bar__icon {
     height: 2.5rem;
     width: 2.5rem;
@@ -65,6 +64,74 @@ body {
   .side-bar__lower {
     list-style: none;
     padding: 2rem; }
+
+.header {
+  display: flex;
+  align-items: center;
+  flex: 1 0;
+  height: 7rem;
+  padding: 5rem 3rem;
+  border-bottom: 1px solid #3C3C3C; }
+  .header__icon-box {
+    position: relative;
+    margin: 0 2rem; }
+  .header__icon-box:hover {
+    cursor: pointer; }
+    .header__icon-box:hover .header__icon {
+      filter: none; }
+  .header__icon {
+    height: 3.2rem;
+    width: 3.2rem;
+    filter: invert(47%) sepia(4%) saturate(16%) hue-rotate(124deg) brightness(103%) contrast(89%); }
+  .header__notification {
+    position: absolute;
+    z-index: 10;
+    top: .05rem;
+    right: .65rem;
+    width: .8rem;
+    height: .8rem;
+    background-color: #FF0000;
+    border-radius: 10rem; }
+  .header__separator {
+    width: .2rem;
+    height: 3.5rem;
+    margin: 0 2.5rem 0 1.5rem;
+    background-color: #232323; }
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto; }
+  .user-info__name {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-left: .1rem; }
+  .user-info__date {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #7C7C7C; }
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: #232323;
+  font-size: 2rem;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: .75rem;
+  flex: 0 0 32%; }
+  .search__icon {
+    margin-right: 1rem; }
+  .search__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: inherit;
+    border: none; }
+    .search__input:focus {
+      outline: none; }
+    .search__input::-webkit-input-placeholder {
+      color: #fff; }
 
 .container {
   max-width: 151.2rem;

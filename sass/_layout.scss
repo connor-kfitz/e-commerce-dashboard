@@ -171,7 +171,7 @@
     display: flex;
     flex-direction: column;
     flex: 0 0 70%;
-    padding: 2rem;
+    padding: $tile-padding;
 
     &__top {
         display: flex;
@@ -179,7 +179,7 @@
 }
 
 .side-dashboard {
-    flex: 1 0;
+    flex: 1;
     background-color: lightgray;
 }   
 
@@ -193,6 +193,7 @@
     flex: .5;
     padding: 2rem 1.5rem;
     border-radius: 1rem;
+    margin-bottom: $tile-padding;
 
     &:not(:last-child) {
         margin-right: 2rem;
@@ -258,5 +259,140 @@
 
     &__graph-img {
         margin-top: auto;
+    }
+}
+
+.large-tile {
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: $tile-padding;
+}
+
+.revenue-order {
+
+    &__top {
+        display: flex;
+        align-items: center;
+        padding-bottom: 1.5rem;
+    }
+
+    &__title {
+        margin-right: auto;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    &__legend-box {
+        display: flex;
+        align-items: center;
+    }
+
+    &__legend-circle {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 10rem;
+        margin-right: .75rem;
+
+        &.red {
+            background-color: #E8502F;
+        }
+
+        &.green {
+            background-color: #C1EF00;
+        }
+    }
+
+    &__legend-text {
+        font-size: 1.4rem;
+        color: $primary-color;
+
+        &:not(:last-child) {
+            margin-right: 2.25rem;
+        }
+    }
+
+    &__chart {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.recent-invoice {
+
+    &__top {
+        display: flex;
+        margin-bottom: 1.75rem;
+    }
+
+    &__title {
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin-right: auto;
+    }
+
+    &__filter-box {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        padding: .5rem 1rem;
+        border-radius: .75rem;
+    }
+
+    &__filter-text {
+        font-size: 1.2rem;
+        color: #000;
+        margin-right: .75rem;
+    }
+
+    &__table {
+        border-collapse: collapse;
+        text-align: start;
+        font-size: 1.4rem;
+        column-rule-color: #fff;
+        font-weight: 500;
+        width: 100%;
+    }
+
+    &__table-body {
+        width: 100%;
+    }
+
+    &__table-header {
+        font-size: 1.4rem;
+        color: $primary-color;
+        width: 100%;
+        text-align: start;
+
+        & th {
+            text-align: start !important;
+            font-weight: 500 !important;
+            padding: .5rem 0;
+            border-bottom: 1px solid #3C3C3C;
+        }
+    }
+
+    &__table-row {
+        width: 100%;
+
+        & td {
+            padding: 2.25rem 0 .75rem 0;
+            border-bottom: 1px solid #3C3C3C;
+        }
+    }
+
+    &__paid-circle{
+        display: inline-flex;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 10rem;
+        margin-right: .15rem;
+
+        &.green {
+            background-color: #4D9A00;
+        } 
+
+        &.yellow {
+            background-color: #F0D411;
+        }
     }
 }

@@ -86,7 +86,6 @@
             </ul>
         </nav>
 
-
         <div class="content">
         <header class="header">
             <div class="user-info">
@@ -139,11 +138,88 @@
                         <img src="./images/return-graph.svg" alt="Average return graph" class="small-tile__graph-img"/>
                     </div>
                 </div>
-                <div class="dashboard-tile large-tile">
-                    
+                <div class="dashboard-tile large-tile revenue-order">
+                    <div class="revenue-order__top">
+                        <div class="revenue-order__title">Revenue vs Order</div>
+                        <div class="revenue-order__legend-box">
+                            <div class="revenue-order__legend-circle red"></div>
+                            <span class="revenue-order__legend-text">Revenue</span>
+                            <div class="revenue-order__legend-circle green"></div>
+                            <span class="revenue-order__legend-text">Order</span>
+                        </div>
+                    </div>
+                    <img src="./images/revenue-order-chart.svg" alt="Revenue vs order chart" class="revenue-order__chart"/>
                 </div>
-                <div class="dashboard-tile large-tile">
+                <div class="dashboard-tile large-tile recent-invoice">
+                    <div class="recent-invoice__top">
+                        <div class="recent-invoice__title">Recent Invoice</div>
+                        <div class="recent-invoice__filter-box">
+                            <span class="recent-invoice__filter-text">Filter</span>
+                            <img src="./images/filter-icon.svg" alt="Filter icon" class="recent-invoice__filter-icon">
+                        </div>
+                    </div>
+                    <table colspan="7" class="recent-invoice__table" >
+                        <tbody class="recent-invoice__table-body">
+                            <tr class="recent-invoice__table-header">
+                                <th>No</th>
+                                <th>Id Customer</th>
+                                <th>Customer Name</th>
+                                <th>City</th>
+                                <th>Order Date</th>
+                                <th>Status</th>
+                                <th>Amount</th>
+                            </tr>
+                            <tr class="recent-invoice__table-row">
+                                <td>1.</td>
+                                <td>#6545</td>
+                                <td>Jane Cooper</td>
+                                <td>Syndey</td>
+                                <td>01 Oct | 11:29 am</td>
+                                <td>
+                                    <div class="recent-invoice__paid-circle green"></div>
+                                    Paid 
+                                </td>
+                                <td>$64</td>
+                            </tr>
 
+                            <tr class="recent-invoice__table-row">
+                                <td>2.</td>
+                                <td>#5412</td>
+                                <td>Wade Warren</td>
+                                <td>Perth</td>
+                                <td>01 Oct | 11:45 am</td>
+                                <td>
+                                    <div class="recent-invoice__paid-circle green"></div>
+                                    Paid
+                                </td>
+                                <td>$557</td>
+                            </tr>
+                            <tr class="recent-invoice__table-row">
+                                <td>3.</td>
+                                <td>#6622</td>
+                                <td>Jenny Wilson</td>
+                                <td>Darwin</td>
+                                <td>01 Oct | 12:10 pm</td>
+                                <td>
+                                    <div class="recent-invoice__paid-circle yellow"></div>
+                                    Pending
+                                </td>
+                                <td>$156</td>
+                            </tr>
+                            <tr class="recent-invoice__table-row">
+                                <td>4.</td>
+                                <td>#6462</td>
+                                <td>Robert Fox</td>
+                                <td>Albany</td>
+                                <td>01 Oct | 01:15 pm</td>
+                                <td>
+                                    <div class="recent-invoice__paid-circle green"></div>
+                                    Paid
+                                </td>
+                                <td>$265</td>
+                            </tr>
+                        </tbody>
+                      </table>
                 </div>
 
             </section>

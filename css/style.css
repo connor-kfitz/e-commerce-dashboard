@@ -141,7 +141,7 @@ body {
     display: flex; }
 
 .side-dashboard {
-  flex: 1 0;
+  flex: 1;
   background-color: lightgray; }
 
 .dashboard-tile {
@@ -152,7 +152,8 @@ body {
   justify-content: space-between;
   flex: .5;
   padding: 2rem 1.5rem;
-  border-radius: 1rem; }
+  border-radius: 1rem;
+  margin-bottom: 2rem; }
   .small-tile:not(:last-child) {
     margin-right: 2rem; }
   .small-tile__header {
@@ -193,6 +194,105 @@ body {
     color: #7C7C7C; }
   .small-tile__graph-img {
     margin-top: auto; }
+
+.large-tile {
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem; }
+
+.revenue-order__top {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1.5rem; }
+
+.revenue-order__title {
+  margin-right: auto;
+  font-size: 2rem;
+  font-weight: 500; }
+
+.revenue-order__legend-box {
+  display: flex;
+  align-items: center; }
+
+.revenue-order__legend-circle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 10rem;
+  margin-right: .75rem; }
+  .revenue-order__legend-circle.red {
+    background-color: #E8502F; }
+  .revenue-order__legend-circle.green {
+    background-color: #C1EF00; }
+
+.revenue-order__legend-text {
+  font-size: 1.4rem;
+  color: #7C7C7C; }
+  .revenue-order__legend-text:not(:last-child) {
+    margin-right: 2.25rem; }
+
+.revenue-order__chart {
+  width: 100%;
+  height: auto; }
+
+.recent-invoice__top {
+  display: flex;
+  margin-bottom: 1.75rem; }
+
+.recent-invoice__title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-right: auto; }
+
+.recent-invoice__filter-box {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: .5rem 1rem;
+  border-radius: .75rem; }
+
+.recent-invoice__filter-text {
+  font-size: 1.2rem;
+  color: #000;
+  margin-right: .75rem; }
+
+.recent-invoice__table {
+  border-collapse: collapse;
+  text-align: start;
+  font-size: 1.4rem;
+  column-rule-color: #fff;
+  font-weight: 500;
+  width: 100%; }
+
+.recent-invoice__table-body {
+  width: 100%; }
+
+.recent-invoice__table-header {
+  font-size: 1.4rem;
+  color: #7C7C7C;
+  width: 100%;
+  text-align: start; }
+  .recent-invoice__table-header th {
+    text-align: start !important;
+    font-weight: 500 !important;
+    padding: .5rem 0;
+    border-bottom: 1px solid #3C3C3C; }
+
+.recent-invoice__table-row {
+  width: 100%; }
+  .recent-invoice__table-row td {
+    padding: 2.25rem 0 .75rem 0;
+    border-bottom: 1px solid #3C3C3C; }
+
+.recent-invoice__paid-circle {
+  display: inline-flex;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 10rem;
+  margin-right: .15rem; }
+  .recent-invoice__paid-circle.green {
+    background-color: #4D9A00; }
+  .recent-invoice__paid-circle.yellow {
+    background-color: #F0D411; }
 
 .container {
   max-width: 151.2rem;

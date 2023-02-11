@@ -1,8 +1,15 @@
 .container {
-    max-width: 151.2rem;
+    max-width: 150rem;
     margin: 8rem auto;
     display: flex;
     background-color: #000;
+    border: 1px solid #3C3C3C;
+
+    @include respond(93.75em) {
+        margin: 0;
+        border: none;
+        min-height: 100vh;
+    }
 }
 
 .content {
@@ -14,4 +21,8 @@
 .dashboard-view {
     display: flex;
     flex: 1 0;
+
+    @include respond(68.75em) {
+        flex-direction: column;
+    }
 }

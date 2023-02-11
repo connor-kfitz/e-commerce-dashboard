@@ -2,8 +2,11 @@
     display: flex;
     flex-direction: column;
     flex: 0 0 15%;
-
     border-right: 1px solid #3C3C3C;
+
+    @include respond(59.75em) {
+        display: none;
+    }
 
     &__header {
       display: flex;
@@ -75,13 +78,36 @@
 .header {
     display: flex;
     align-items: center;
-    height: 7rem;
-    padding: 5rem 3rem;
+    padding: 3rem 3rem;
     border-bottom: 1px solid #3C3C3C;
+
+    @include respond(59.75em) {
+        flex-wrap: wrap;
+    }
+
+    &__hamburger-icon {
+        display: none;
+
+        @include respond(59.75em) {
+            display: block;
+            background-image: url('../images/menu-icon.svg');
+            background-size: cover;
+            background-repeat: none;
+            width: 3rem;
+            height: 2.6rem;
+            margin-right: 3rem;
+            border: none;
+            background-color: transparent;
+        }
+    }
 
     &__icon-box {
         position: relative;
         margin: 0 2rem;
+
+        @include respond(30em) {
+            display: none;
+        }
     }
 
     &__icon-box:hover {
@@ -114,6 +140,10 @@
         height: 3.5rem;
         margin: 0 2.5rem 0 1.5rem;
         background-color: $tile-background-color;
+
+        @include respond(59.75em) {
+            display: none;
+        }
     }
 }
 
@@ -145,6 +175,12 @@
     border-radius: .75rem;
     flex: 0 0 32%;
 
+    @include respond(59.75em) {
+        flex: 0 0 100%;
+        margin: 0 auto;
+        margin-top: $tile-padding;
+    }
+
     &__icon {
         margin-right: 1rem;
         
@@ -156,6 +192,7 @@
         color: inherit;
         background-color: inherit;
         border: none;
+        min-width: 0;
 
         &:focus {
             outline: none;
@@ -176,6 +213,10 @@
 
     &__top {
         display: flex;
+
+        @include respond(39.875em) {
+            flex-direction: column;
+        }
     }
 }
 
@@ -193,6 +234,10 @@
 
     &:not(:last-child) {
         margin-right: 2rem;
+
+        @include respond(39.875em) {
+            margin-right: 0;
+        }
     }
 
     &__header {
@@ -316,6 +361,9 @@
 }
 
 .recent-invoice {
+    margin-bottom: 0;
+    flex: 1;
+    min-width: 0;
 
     &__top {
         display: flex;
@@ -342,12 +390,23 @@
         margin-right: .75rem;
     }
 
+    &__scrollable-table {
+        width: 100%;
+        white-space: nowrap;
+
+        @include respond(39.875em){
+            max-width: $max-width;
+            overflow-x: scroll;
+        }
+    }
+
     &__table {
         border-collapse: collapse;
         text-align: start;
         font-size: 1.4rem;
         column-rule-color: #fff;
         font-weight: 500;
+        white-space: nowrap;
         width: 100%;
     }
 
@@ -356,16 +415,16 @@
     }
 
     &__table-header {
+        width: 100%;
         font-size: 1.4rem;
         color: $primary-color;
-        width: 100%;
         text-align: start;
 
         & th {
             text-align: start !important;
             font-weight: 500 !important;
             padding: .5rem 0;
-            border-bottom: 1px solid #3C3C3C;
+            border-bottom: 1px solid #3C3C3C;  
         }
     }
 
@@ -373,7 +432,7 @@
         width: 100%;
 
         & td {
-            padding: 2.25rem 0 .75rem 0;
+            padding: 2.25rem 1rem .75rem 1rem;
             border-bottom: 1px solid #3C3C3C;
         }
     }
@@ -402,6 +461,17 @@
     padding: $tile-padding;
     padding-left: 0;
     background-color: #000;
+
+    @include respond(68.75em) {
+        flex-direction: row;
+        padding: $tile-padding;
+        padding-top: 0;
+    }
+
+    @include respond(41.375em) {
+        flex-wrap: wrap;
+    }
+
 }
 
 .sales {
@@ -412,10 +482,36 @@
     border-radius: 1rem;
     margin-bottom: $tile-padding;
 
+    @include respond(68.75em) {
+        margin-right: $tile-padding;
+        margin-bottom: 0;
+        flex: 0 0 50%;
+        align-items: flex-start;
+    }
+
+    @include respond(41.375em) {
+        flex: 0 0 100%;
+        margin-bottom: $tile-padding;
+    }
+
+    &__content-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include respond(68.75em) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-around;
+        }
+    }
+
     &__title {
         font-size: 2rem;
         font-weight: 700;
         padding-bottom: .5rem;
+        text-align: center;
     }
 
     &__pie-chart {
@@ -426,7 +522,16 @@
         list-style: none;
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
+
+        @include respond(68.75em) {
+            flex-direction: column;
+        }
+
+        // @include respond(41.375em) {
+        //     width: auto;
+        //     flex-direction: column;
+        //     align-items: center;
+        // }
     }
 
     &__list-item {
@@ -435,8 +540,12 @@
         font-size: 1.2rem;
         color: $primary-color;
         flex: 0 0 50%;
-        padding-left: 4rem;
+        padding-left: 12%;
         margin-bottom: .75rem;
+
+        @include respond(68.75) {
+            flex: 100%;
+        }
     }
 
     &__circle {
@@ -472,6 +581,7 @@
     flex-direction: column;
     padding: 2rem;
     border-radius: 1rem;
+    flex: 1;
 
     &__title {
         font-size: 2rem;
@@ -532,6 +642,7 @@
 
     &__item {
         display: flex;
+        align-items: center;
 
         &:not(:last-child) {
             padding-bottom: 1rem;
@@ -542,6 +653,9 @@
 
     &__item-img {
         margin-right: 1.25rem;
+        width: 5.6rem;
+        height: 6.3rem;
+
     }
 
     &__item-box {

@@ -88,6 +88,7 @@
 
         <div class="content">
         <header class="header">
+            <button class="header__hamburger-icon"></button>
             <div class="user-info">
                 <span class="user-info__name">Welcome, Connor</span>
                 <span class="user-info__date">5 February 2022 | 11:59 AM GMT</span>
@@ -158,6 +159,7 @@
                             <img src="./images/filter-icon.svg" alt="Filter icon" class="recent-invoice__filter-icon">
                         </div>
                     </div>
+                    <div class="recent-invoice__scrollable-table">
                     <table colspan="7" class="recent-invoice__table" >
                         <tbody class="recent-invoice__table-body">
                             <tr class="recent-invoice__table-header">
@@ -219,36 +221,40 @@
                                 <td>$265</td>
                             </tr>
                         </tbody>
-                      </table>
+                    </table>
+                    </div>
                 </div>
 
             </section>
             <section class="side-dashboard">
                 <div class="dashboard-tile sales">
                     <div class="sales__title">Sales by Category</div>
-                    <img src="./images/sales-pie-chart.svg" alt="Sales pie chart" class="sales__pie-chart" />
-                    <ul class="sales__legend-box">
-                        <li class="sales__list-item">
-                            <div class="sales__circle purple"></div>
-                            Women
-                        </li>
-                        <li class="sales__list-item">
-                            <div class="sales__circle white"></div>
-                            Home
-                        </li>
-                        <li class="sales__list-item">
-                            <div class="sales__circle blue"></div>
-                            Men
-                        </li>
-                        <li class="sales__list-item">
-                            <div class="sales__circle grey"></div>
-                            Wellness
-                        </li>
-                        <li class="sales__list-item">
-                            <div class="sales__circle orange"></div>
-                            Kids
-                        </li>
-                    </ul>
+                    <div class="sales__content-box">
+                        <img src="./images/sales-pie-chart.svg" alt="Sales pie chart" class="sales__pie-chart" />
+                        <ul class="sales__legend-box">
+                            <li class="sales__list-item">
+                                <div class="sales__circle purple"></div>
+                                Women
+                            </li>
+                            <li class="sales__list-item">
+                                <div class="sales__circle white"></div>
+                                Home
+                            </li>
+                            <li class="sales__list-item">
+                                <div class="sales__circle blue"></div>
+                                Men
+                            </li>
+                            <li class="sales__list-item">
+                                <div class="sales__circle grey"></div>
+                                Wellness
+                            </li>
+                            <li class="sales__list-item">
+                                <div class="sales__circle orange"></div>
+                                Kids
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
 
                 <div class="dashboard-tile top-products">
